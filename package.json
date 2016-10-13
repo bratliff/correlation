@@ -1,16 +1,18 @@
 {
-  "name": "correlation-report",
+  "name": "gulp.sass",
   "version": "1.0.0",
-  "description": "static layout of correlation report",
-  "main": "index.js",
+  "description": "Gulp & SASS",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
-  "author": "Ben Ratliff",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.17.0",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.2.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.2.0"
   }
 }

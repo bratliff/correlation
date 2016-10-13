@@ -1,0 +1,83 @@
+//Variables for correlation report
+
+$correlation-red: #BC1012;
+$correlation-yellow: #E2C63D;
+$correlation-green: #3B982B;
+$correlation-blue: #007CD3;
+
+$bg-grey: #eee;
+$grey: #6A6A6A;
+
+@mixin boxside($color, $thickness) {
+  border-left: $thickness solid $color;
+}
+
+.correlation-report {
+    text-align:center;
+    .report-inner-wrapper {
+        background:$bg-grey;
+        text-align:left;
+        width:1020px;
+        margin:0 auto;
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+    h1 {
+        font-size:1rem;
+    }
+    .parameters {
+        display:flex;
+        padding-left:120px;
+        div {
+            flex-basis:33.3%;
+        }
+    }
+    .results {
+        margin-top:50px;
+        .row {
+            display:flex;
+            justify-content: center;
+            div {
+                background:#fff;
+                padding:10px;
+                margin:0 10px;
+                flex-basis:20%;
+                border-right:3px solid #cecece;
+                &:first-child {
+                    flex-basis:10%;
+                    background:none;
+                    border:none;
+                }
+                &:nth-child(2) {
+                    @include boxside($correlation-red, 2px);
+                }
+                &:nth-child(3) {
+                    @include boxside($correlation-yellow, 2px);
+                }
+                &:nth-child(4) {
+                    @include boxside($correlation-green, 2px);
+                }
+                &:nth-child(5) {
+                    @include boxside($correlation-blue, 2px);
+                }
+            }
+        }
+        .row.benchmark-key {
+            margin-bottom:40px;
+            div {
+                &:nth-child(2) {
+                    @include boxside($correlation-red, 16px);
+                }
+                &:nth-child(3) {
+                    @include boxside($correlation-yellow, 16px);
+                }
+                &:nth-child(4) {
+                    @include boxside($correlation-green, 16px);
+                }
+                &:nth-child(5) {
+                    @include boxside($correlation-blue, 16px);
+                }
+            }
+        }
+    }
+}
