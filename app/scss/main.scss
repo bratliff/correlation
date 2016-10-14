@@ -26,10 +26,14 @@ $grey: #6A6A6A;
         font-size:1rem;
     }
     .header-icon {
-        width:21px;
-        height:18px;
+        width:28px;
+        height:21px;
         float:left;
-        filter:$correlation-red;
+    }
+    .key-icon {
+        width:20px;
+        height:14px;
+        float:left;
         path {
             fill:$correlation-red;
         }
@@ -51,6 +55,8 @@ $grey: #6A6A6A;
                 padding:10px;
                 margin:0 10px;
                 flex-basis:20%;
+                font-size:0.7rem;
+                color:$grey;
                 -webkit-box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
                 -moz-box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
                 box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
@@ -112,7 +118,7 @@ $grey: #6A6A6A;
                 }
             }
         }
-        .circle-one {
+        .circle {
             border-radius:50%;
             background:$grey;
             width:21px;
@@ -123,7 +129,89 @@ $grey: #6A6A6A;
             font-size:0.8rem;
             text-align:center;
             padding-top:4px;
-            margin-left:-21px;
+            margin:0 0 20px -21px;
         }
+        .second {
+            margin:30px 0px 0 -21px;
+            position:absolute;
+        }
+        .barchart {
+            background:$correlation-red;
+            width:95%;
+            height:30px;
+            margin:20px 0 0 5px;
+        }
+        .chart {
+            width:95%;
+            height:40px;
+            margin:20px 0 0 5px;
+            font: 10px sans-serif;
+            position:relative;
+            div {
+                width:25%;
+                text-align: right;
+                padding: 20px 0;
+                margin: 0;
+                color: white;
+                float:left;
+                &:first-child {
+                    background-color: $correlation-red;
+                }
+                &:nth-child(2) {
+                    background-color: $correlation-yellow;
+                }
+                &:nth-child(3) {
+                    background-color: $correlation-green;
+                }
+                &:nth-child(4) {
+                    background-color: $correlation-blue;
+                }
+            }
+        }
+        .studentkey {
+            list-style-type: none;
+            padding:0;
+            display:flex;
+            margin:0;
+            li {
+                flex-basis:25%;
+                &:first-child() {
+                    .key-icon {
+                        path {
+                            fill:$correlation-red;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .key-icon {
+                        path {
+                            fill:$correlation-yellow;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    .key-icon {
+                        path {
+                            fill:$correlation-green;
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    .key-icon {
+                        path {
+                            fill:$correlation-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .arc text {
+      font: 10px sans-serif;
+      text-anchor: middle;
+    }
+
+    .arc path {
+      stroke: #fff;
     }
 }
