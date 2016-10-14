@@ -9,6 +9,14 @@
     padding-bottom: 40px; }
   .correlation-report h1 {
     font-size: 1rem; }
+  .correlation-report .header-icon {
+    width: 21px;
+    height: 18px;
+    float: left;
+    -webkit-filter: #BC1012;
+            filter: #BC1012; }
+    .correlation-report .header-icon path {
+      fill: #BC1012; }
   .correlation-report .parameters {
     display: -ms-flexbox;
     display: flex;
@@ -23,26 +31,34 @@
       display: flex;
       -ms-flex-pack: center;
           justify-content: center; }
-      .correlation-report .results .row div {
+      .correlation-report .results .row > div {
         background: #fff;
         padding: 10px;
         margin: 0 10px;
         -ms-flex-preferred-size: 20%;
             flex-basis: 20%;
-        border-right: 3px solid #cecece; }
-        .correlation-report .results .row div:first-child {
+        box-shadow: 5px 2px 5px 0px #cdcdd1; }
+        .correlation-report .results .row > div:first-child {
           -ms-flex-preferred-size: 10%;
               flex-basis: 10%;
           background: none;
-          border: none; }
-        .correlation-report .results .row div:nth-child(2) {
+          box-shadow: none; }
+        .correlation-report .results .row > div:nth-child(2) {
           border-left: 2px solid #BC1012; }
-        .correlation-report .results .row div:nth-child(3) {
+          .correlation-report .results .row > div:nth-child(2) .header-icon path {
+            fill: #BC1012; }
+        .correlation-report .results .row > div:nth-child(3) {
           border-left: 2px solid #E2C63D; }
-        .correlation-report .results .row div:nth-child(4) {
+          .correlation-report .results .row > div:nth-child(3) .header-icon path {
+            fill: #E2C63D; }
+        .correlation-report .results .row > div:nth-child(4) {
           border-left: 2px solid #3B982B; }
-        .correlation-report .results .row div:nth-child(5) {
+          .correlation-report .results .row > div:nth-child(4) .header-icon path {
+            fill: #3B982B; }
+        .correlation-report .results .row > div:nth-child(5) {
           border-left: 2px solid #007CD3; }
+          .correlation-report .results .row > div:nth-child(5) .header-icon path {
+            fill: #007CD3; }
     .correlation-report .results .row.benchmark-key {
       margin-bottom: 40px; }
       .correlation-report .results .row.benchmark-key div:nth-child(2) {
@@ -53,3 +69,15 @@
         border-left: 16px solid #3B982B; }
       .correlation-report .results .row.benchmark-key div:nth-child(5) {
         border-left: 16px solid #007CD3; }
+    .correlation-report .results .circle-one {
+      border-radius: 50%;
+      background: #6A6A6A;
+      width: 21px;
+      height: 17px;
+      display: block;
+      color: #fff;
+      float: left;
+      font-size: 0.8rem;
+      text-align: center;
+      padding-top: 4px;
+      margin-left: -21px; }
