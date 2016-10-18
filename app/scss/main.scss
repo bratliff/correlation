@@ -5,7 +5,9 @@ $correlation-yellow: #E2C63D;
 $correlation-green: #3B982B;
 $correlation-blue: #007CD3;
 
-$bg-grey: #eee;
+$bg-grey: #faf9f9;
+$panel-grey: #f2f2f2;
+$lite-grey: #a9a9a9;
 $grey: #6A6A6A;
 
 @mixin boxside($color, $thickness) {
@@ -14,6 +16,7 @@ $grey: #6A6A6A;
 
 .correlation-report {
     text-align:center;
+    color:$grey;
     .report-inner-wrapper {
         background:$bg-grey;
         text-align:left;
@@ -38,11 +41,59 @@ $grey: #6A6A6A;
             fill:$correlation-red;
         }
     }
+    .circle {
+        border-radius:50%;
+        background:$grey;
+        display:block;
+        color:#fff;
+        float:left;
+        text-align:center;
+        margin:20px 10px 50px 0;
+    }
     .parameters {
         display:flex;
         padding-left:120px;
+        color:$lite-grey;
+        font-size:0.9rem;
+        h1 {
+            color:$grey;
+            font-weight:400;
+            font-size:0.9rem;
+        }
         div {
             flex-basis:33.3%;
+            &:nth-child(3) {
+                margin-top:16px;
+            }
+        }
+        .studentcount {
+            font-weight:700;
+        }
+        .header-icon {
+            margin:-4px 0 0 -4px;
+            path {
+                fill:$grey;
+            }
+        }
+        .circle {
+            width:44px;
+            height:31px;
+            padding-top:13px;
+        }
+        .vinn-diagram {
+            background:url('/img/crossing_circles.svg') no-repeat;
+            width:90px;
+            height:50px;
+            float:left;
+            margin:0 0 40px 0;
+            div {
+                display:block;
+                width:38px;
+                padding-top:14px;
+                float:left;
+                text-align: center;
+                color:$grey;
+            }
         }
     }
     .results {
@@ -52,21 +103,13 @@ $grey: #6A6A6A;
             justify-content: center;
             > div {
                 background:#fff;
-                padding:10px;
+                padding:20px 10px;
                 margin:0 10px;
                 flex-basis:20%;
-                font-size:0.7rem;
-                color:$grey;
+                font-size:0.9rem;
                 -webkit-box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
                 -moz-box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
                 box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
-                &:first-child {
-                    flex-basis:10%;
-                    background:none;
-                    -webkit-box-shadow: none;
-                    -moz-box-shadow: none;
-                    box-shadow:none;
-                }
                 &:nth-child(2) {
                     @include boxside($correlation-red, 2px);
                     .header-icon {
@@ -100,39 +143,23 @@ $grey: #6A6A6A;
                     }
                 }
             }
-        }
-        .row.benchmark-key {
-            margin-bottom:40px;
-            div {
-                &:nth-child(2) {
-                    @include boxside($correlation-red, 16px);
-                }
-                &:nth-child(3) {
-                    @include boxside($correlation-yellow, 16px);
-                }
-                &:nth-child(4) {
-                    @include boxside($correlation-green, 16px);
-                }
-                &:nth-child(5) {
-                    @include boxside($correlation-blue, 16px);
-                }
+            .gradecol {
+                flex-basis:10%;
+                background:none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow:none;
             }
         }
         .circle {
-            border-radius:50%;
-            background:$grey;
             width:21px;
             height:17px;
-            display:block;
-            color:#fff;
-            float:left;
             font-size:0.8rem;
-            text-align:center;
             padding-top:4px;
             margin:0 0 20px -21px;
         }
         .second {
-            margin:30px 0px 0 -21px;
+            margin:40px 0px 0 -21px;
             position:absolute;
         }
         .barchart {
@@ -144,7 +171,7 @@ $grey: #6A6A6A;
         .chart {
             width:95%;
             height:40px;
-            margin:20px 0 0 5px;
+            margin:30px 0 0 5px;
             font: 10px sans-serif;
             position:relative;
             div {
@@ -173,6 +200,7 @@ $grey: #6A6A6A;
             padding:0;
             display:flex;
             margin:0;
+            font-size:0.7rem;
             li {
                 flex-basis:25%;
                 &:first-child() {
@@ -205,6 +233,55 @@ $grey: #6A6A6A;
                 }
             }
         }
+        .row {
+            .dropdown {
+                width:100%;
+                background:$panel-grey;
+                height:30px;
+                display:block;
+                box-shadow:none;
+                flex-basis:94%;
+                border:none !important;
+                padding:15px 0 0 10px;
+                margin:3px auto;
+                cursor:pointer;
+                .arrow {
+                    float:left;
+                    width:30px;
+                    margin-top:-7px;
+                    &.closed {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+    .row.benchmark-key {
+        margin-bottom:40px;
+        .dropdown {
+            display:block;
+            width:100%;
+            height:40px;
+            background-color:#555;
+        }
+        span {
+            color:$lite-grey;
+            font-size:0.8rem;
+        }
+        div {
+            &:nth-child(2) {
+                @include boxside($correlation-red, 16px);
+            }
+            &:nth-child(3) {
+                @include boxside($correlation-yellow, 16px);
+            }
+            &:nth-child(4) {
+                @include boxside($correlation-green, 16px);
+            }
+            &:nth-child(5) {
+                @include boxside($correlation-blue, 16px);
+            }
+        }
     }
     .arc text {
       font: 10px sans-serif;
@@ -213,5 +290,52 @@ $grey: #6A6A6A;
 
     .arc path {
       stroke: #fff;
+    }
+    .overlay {
+        width:250px;
+        height:110px;
+        padding:20px;
+        top:470px;
+        left:340px;
+        z-index: 2;
+        background:#fff;
+        position:absolute;
+        font-size:0.9rem;
+        line-height:18px;
+        text-align:left;
+        -webkit-box-shadow: 0px 0px 17px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 17px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 17px -5px rgba(0,0,0,0.75);
+        &::after, &::before {
+            bottom: 100%;
+        	left: 20%;
+        	border: solid transparent;
+        	content: " ";
+        	height: 0;
+        	width: 0;
+        	position: absolute;
+        	pointer-events: none;
+        }
+        &::after {
+            border-color: rgba(255, 255, 255, 0);
+        	border-bottom-color: #ffffff;
+        	border-width: 10px;
+        	margin-left: -10px;
+        }
+        &::before {
+            border-color: rgba(227, 227, 227, 0);
+        	border-bottom-color: #e3e3e3;
+        	border-width: 14px;
+        	margin-left: -14px;
+        }
+        .buttonrow {
+            
+            position:absolute;
+            bottom:20px;
+            width:100%;
+            .overlay-btn {
+                float:right;
+            }
+        }
     }
 }

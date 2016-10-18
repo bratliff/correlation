@@ -18,8 +18,8 @@ gulp.task('serve', ['sass'], function() {
         server: "./app"
     });
 
-    gulp.watch(src.scss, ['sass']);
-        gulp.watch(src.html).on('change', reload);
+    gulp.watch(src.scss, ['sass', 'injectSvg']);
+    gulp.watch(src.html).on('change', reload);
     gulp.watch(src.html, ['copy', 'injectSvg']);
 
 });
