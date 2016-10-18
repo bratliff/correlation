@@ -230,7 +230,16 @@
       margin-left: -14px; }
     .correlation-report .overlay .buttonrow {
       position: absolute;
-      bottom: 20px;
-      width: 100%; }
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.75rem; }
       .correlation-report .overlay .buttonrow .overlay-btn {
-        float: right; }
+        margin: -7px 40px 0 0;
+        padding: 5px 25px;
+        border: #6A6A6A 1px solid;
+        border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        float: right;
+        display: block;
+        cursor: pointer; }

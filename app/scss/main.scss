@@ -329,12 +329,20 @@ $grey: #6A6A6A;
         	margin-left: -14px;
         }
         .buttonrow {
-            
             position:absolute;
-            bottom:20px;
+            bottom:10px;
             width:100%;
+            font-size:0.75rem;
             .overlay-btn {
+                margin:-7px 40px 0 0;
+                padding:5px 25px;
+                border:$grey 1px solid;
+                border-radius: 5px 5px 5px 5px;
+                -moz-border-radius: 5px 5px 5px 5px;
+                -webkit-border-radius: 5px 5px 5px 5px;
                 float:right;
+                display:block;
+                cursor: pointer;
             }
         }
     }
