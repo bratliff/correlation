@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="46px" viewBox="0 0 78 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="correlation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-640.000000, -1148.000000)" stroke="#6A6A6A">
+            <g id="Group-13" transform="translate(45.000000, 1084.000000)">
+                <g id="Group-18" transform="translate(0.000000, 53.000000)">
+                    <g id="Group-21">
+                        <g id="Group-4" transform="translate(596.000000, 12.000000)">
+                            <circle id="Oval" stroke-width="2" cx="22" cy="22" r="22"></circle>
+                            <circle id="Oval" stroke-width="2" cx="54" cy="22" r="22"></circle>
+                            <path d="M38,37.0997524 C41.7196936,33.1597085 44,27.8461513 44,22 C44,16.1538487 41.7196936,10.8402915 38,6.90024759 C34.2803064,10.8402915 32,16.1538487 32,22 C32,27.8461513 34.2803064,33.1597085 38,37.0997524 Z" id="Combined-Shape" fill="#6A6A6A"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

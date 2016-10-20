@@ -81,7 +81,7 @@ $grey: #6A6A6A;
             padding-top:13px;
         }
         .vinn-diagram {
-            background:url('/img/crossing_circles.svg') no-repeat;
+            background:url('../img/crossing_circles.svg') no-repeat;
             width:90px;
             height:50px;
             float:left;
@@ -101,15 +101,16 @@ $grey: #6A6A6A;
         .row {
             display:flex;
             justify-content: center;
+            &.topmargin {
+                margin-top:20px;
+            }
             > div {
                 background:#fff;
                 padding:20px 10px;
                 margin:0 10px;
                 flex-basis:20%;
                 font-size:0.9rem;
-                -webkit-box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
-                -moz-box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
-                box-shadow: 5px 2px 5px 0px rgba(205,205,209,1);
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                 &:nth-child(2) {
                     @include boxside($correlation-red, 2px);
                     .header-icon {
@@ -257,7 +258,6 @@ $grey: #6A6A6A;
         }
     }
     .row.benchmark-key {
-        margin-bottom:40px;
         .dropdown {
             display:block;
             width:100%;
@@ -296,7 +296,7 @@ $grey: #6A6A6A;
         height:110px;
         padding:20px;
         top:470px;
-        left:340px;
+        left:25%;
         z-index: 2;
         background:#fff;
         position:absolute;
