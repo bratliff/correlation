@@ -246,6 +246,9 @@ $grey: #6A6A6A;
                 padding:15px 0 0 10px;
                 margin:3px auto;
                 cursor:pointer;
+                &.secondary {
+                    padding-left:40px;
+                }
                 .arrow {
                     float:left;
                     width:30px;
@@ -295,7 +298,7 @@ $grey: #6A6A6A;
         width:250px;
         height:110px;
         padding:20px;
-        top:470px;
+        top:440px;
         left:25%;
         z-index: 2;
         background:#fff;

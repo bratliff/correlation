@@ -169,6 +169,8 @@
       padding: 15px 0 0 10px;
       margin: 3px auto;
       cursor: pointer; }
+      .correlation-report .results .row .dropdown.secondary {
+        padding-left: 40px; }
       .correlation-report .results .row .dropdown .arrow {
         float: left;
         width: 30px;
@@ -200,7 +202,7 @@
     width: 250px;
     height: 110px;
     padding: 20px;
-    top: 470px;
+    top: 440px;
     left: 25%;
     z-index: 2;
     background: #fff;
